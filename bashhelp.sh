@@ -25,6 +25,12 @@ else
     echo "This will only be output if a non number is provided."
 fi
 
+# is this a number
+regex='^[0-9]+$'
+if ! [[ $testnumber =~ $regex ]] ; then
+   echo "This is not a number" >&2
+fi
+
 ## loops ##
 
 # basic while do loop
